@@ -188,7 +188,10 @@ const TrackingScreen: React.FC = () => {
         value={manualProductName}
         onChangeText={setManualProductName}
       />
-      <Button title="Log Protein" onPress={() => addProtein('manual')} />
+      <TouchableOpacity style={styles.submitButton}>
+        <Text style={styles.submitButtonText}>Log Protein</Text>
+      </TouchableOpacity>
+      {/* <Button title="Log Protein" onPress={() => addProtein('manual')} /> */}
     </View>
   );
 
@@ -251,6 +254,16 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     backgroundColor: '#F5F5F5',
+  },
+  submitButton: {
+    backgroundColor: '#007AFF',
+    padding: 15,
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  submitButtonText: {
+    color: '#fff',
+    fontWeight: 'bold',
   },
   scannerContainer: {
     flex: 1,

@@ -44,7 +44,8 @@ const ProfileScreen = ({}) => {
       gender,
     });
     const weight = parseFloat(targetWeight) / 2.205;
-    const proteinGoal = calculateProteinGoal(weight, activityLevel);
+    const weight_adj = Math.round(weight * 100) / 100;
+    const proteinGoal = calculateProteinGoal(weight_adj, activityLevel);
   };
 
   const calculateProteinGoal = (
